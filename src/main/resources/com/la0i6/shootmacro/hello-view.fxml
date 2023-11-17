@@ -1,16 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.la0i6.shootmacro.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
-
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.la0i6.shootmacro.MacroController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="新建" />
+                        <MenuItem mnemonicParsing="false" text="打开…" />
+                        <Menu mnemonicParsing="false" text="打开最近" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="关闭" />
+                        <MenuItem mnemonicParsing="false" text="保存" />
+                        <MenuItem mnemonicParsing="false" text="保存到…" />
+                        <MenuItem mnemonicParsing="false" text="撤销" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="偏好设置…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="退出" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="编辑">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="撤销" />
+                        <MenuItem mnemonicParsing="false" text="重做" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="剪切" />
+                        <MenuItem mnemonicParsing="false" text="复制" />
+                        <MenuItem mnemonicParsing="false" text="粘贴" />
+                        <MenuItem mnemonicParsing="false" text="删除" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="全选" />
+                        <MenuItem mnemonicParsing="false" text="取消全选" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="关于软件">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="作者qq909429920" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="202.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Pane layoutX="14.0" layoutY="14.0" prefHeight="201.0" prefWidth="306.0">
+                    <children>
+                        <Label id="label_one" layoutX="25.0" layoutY="30.0" text="瞬狙" />
+                        <Label id="label_two" layoutX="25.0" layoutY="60.0" text="USP" />
+                        <Label id="label_three" layoutX="25.0" layoutY="90.0" text="状态" />
+                        <Label id="label_four" layoutX="25.0" layoutY="120.0" text="作者" />
+                        <CheckBox id="cb_shoot" layoutX="25.0" layoutY="150.0" mnemonicParsing="false" text="架狙开启就勾选" />
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
 </VBox>

@@ -3,7 +3,7 @@ package com.la0i6.shootmacro;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class MacroController {
     @FXML
     private Label label_one;
 
@@ -17,7 +17,7 @@ public class HelloController {
     private Label label_four;
 
 
-    public HelloController() {
+    public MacroController() {
     }
 
 }

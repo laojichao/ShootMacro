@@ -1,4 +1,4 @@
-package com.la0i6.purgatorymacro;
+package com.la0i6.shootmacro;
 
 import java.util.List;
 
