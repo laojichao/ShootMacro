@@ -1,0 +1,65 @@
+2023-11-26 11:52:02  [ Timer-0:0 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@13e1d3da, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 11:52:02  [ Timer-0:2 ] - [ INFO ]  1700970721925
+  2023-11-26 12:02:02  [ Timer-0:599709 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@7f804ed7, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 12:02:02  [ Timer-0:599709 ] - [ INFO ]  1700971321684
+  2023-11-26 12:12:01  [ Timer-0:1199515 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@7755e404, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 12:12:01  [ Timer-0:1199516 ] - [ INFO ]  1700971921516
+  2023-11-26 12:22:01  [ Timer-0:1799502 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@702686f2, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 12:22:01  [ Timer-0:1799502 ] - [ INFO ]  1700972521516
+  2023-11-26 12:32:01  [ Timer-0:2399514 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@1a7f9e41, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 12:32:01  [ Timer-0:2399515 ] - [ INFO ]  1700973121538
+  2023-11-26 12:33:45  [ JNativeHook Dispatch Thread:0 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:33:48  [ Timer-0:2092 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@5255311e, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 12:33:48  [ Timer-0:2093 ] - [ INFO ]  1700973227674
+  2023-11-26 12:34:06  [ Timer-0:0 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@2f5dbde6, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 12:34:06  [ Timer-0:2 ] - [ INFO ]  1700973245800
+  2023-11-26 12:34:10  [ JNativeHook Dispatch Thread:4376 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:34:12  [ JNativeHook Dispatch Thread:6349 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:34:13  [ JNativeHook Dispatch Thread:7395 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:34:58  [ JNativeHook Dispatch Thread:0 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:35:01  [ Timer-0:2926 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@2f4a99aa, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 12:35:01  [ Timer-0:2926 ] - [ INFO ]  1700973301132
+  2023-11-26 12:37:41  [ JNativeHook Dispatch Thread:162926 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:37:52  [ JNativeHook Dispatch Thread:173729 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:37:53  [ JNativeHook Dispatch Thread:174385 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:38:38  [ JNativeHook Dispatch Thread:219770 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:38:48  [ JNativeHook Dispatch Thread:229646 ] - [ INFO ]  -------------------瞬狙--------------------
+  2023-11-26 12:38:50  [ JNativeHook Dispatch Thread:231826 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:38:51  [ JNativeHook Dispatch Thread:232730 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:38:51  [ JNativeHook Dispatch Thread:233343 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:38:52  [ JNativeHook Dispatch Thread:233906 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:38:53  [ JNativeHook Dispatch Thread:234387 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:38:53  [ JNativeHook Dispatch Thread:234789 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:38:53  [ JNativeHook Dispatch Thread:235049 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:38:54  [ JNativeHook Dispatch Thread:235583 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:38:54  [ JNativeHook Dispatch Thread:235863 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:38:54  [ JNativeHook Dispatch Thread:236097 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:38:55  [ JNativeHook Dispatch Thread:236605 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:38:55  [ JNativeHook Dispatch Thread:236975 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:38:55  [ JNativeHook Dispatch Thread:237184 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:38:56  [ JNativeHook Dispatch Thread:237373 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:38:56  [ JNativeHook Dispatch Thread:237680 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:43:26  [ JNativeHook Dispatch Thread:507839 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:43:29  [ JNativeHook Dispatch Thread:510438 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:43:34  [ JNativeHook Dispatch Thread:516005 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:43:35  [ JNativeHook Dispatch Thread:516437 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:43:35  [ JNativeHook Dispatch Thread:516701 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:43:35  [ JNativeHook Dispatch Thread:516983 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:43:35  [ JNativeHook Dispatch Thread:517362 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:44:25  [ JNativeHook Dispatch Thread:566787 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:44:27  [ JNativeHook Dispatch Thread:568599 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:44:27  [ JNativeHook Dispatch Thread:569185 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:44:28  [ JNativeHook Dispatch Thread:569608 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:44:28  [ JNativeHook Dispatch Thread:570183 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:44:29  [ JNativeHook Dispatch Thread:570719 ] - [ INFO ]  开关已经打开
+  2023-11-26 12:45:01  [ Timer-0:602455 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@6f0944de, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 12:45:01  [ Timer-0:602455 ] - [ INFO ]  1700973900727
+  2023-11-26 12:47:39  [ JavaFX Application Thread:760713 ] - [ INFO ]  关闭窗口
+  2023-11-26 12:51:03  [ JNativeHook Dispatch Thread:964600 ] - [ INFO ]  开关已经关闭
+  2023-11-26 12:55:01  [ Timer-0:1202506 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@1e19022d, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 12:55:01  [ Timer-0:1202506 ] - [ INFO ]  1700974500791
+  2023-11-26 13:05:01  [ Timer-0:1802607 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@402cdc97, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 13:05:01  [ Timer-0:1802607 ] - [ INFO ]  1700975100902
+  2023-11-26 13:15:01  [ Timer-0:2402730 ] - [ INFO ]  ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@4453ece2, ret=[SUCCESS::接口调用成功]}
+  2023-11-26 13:15:01  [ Timer-0:2402730 ] - [ INFO ]  1700975701016
+  

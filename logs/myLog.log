@@ -1,0 +1,25 @@
+2023-11-26 13:37:24.119 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:180) --- ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@5ce58829, ret=[SUCCESS::接口调用成功]}
+2023-11-26 13:37:24.120 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:182) --- 1700977043730
+2023-11-26 13:37:27.118 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:270) --- 开关已经打开
+2023-11-26 13:37:27.801 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:274) --- 开关已经关闭
+2023-11-26 13:37:28.612 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:270) --- 开关已经打开
+2023-11-26 13:42:59.182 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:181) --- ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@6b87e90e, ret=[SUCCESS::接口调用成功]}
+2023-11-26 13:42:59.184 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:183) --- 1700977378807
+2023-11-26 13:45:33.860 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:273) --- 开关已经打开
+2023-11-26 13:45:34.582 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:277) --- 开关已经关闭
+2023-11-26 13:45:35.026 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:273) --- 开关已经打开
+2023-11-26 13:45:36.601 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:183) --- ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@5ce58829, ret=[SUCCESS::接口调用成功]}
+2023-11-26 13:45:36.602 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:185) --- 1700977536230
+2023-11-26 13:45:42.756 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:277) --- 开关已经关闭
+2023-11-26 13:45:43.537 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:273) --- 开关已经打开
+2023-11-26 13:45:44.476 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:277) --- 开关已经关闭
+2023-11-26 13:47:57.907 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:182) --- ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@583a9a2, ret=[SUCCESS::接口调用成功]}
+2023-11-26 13:47:57.914 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:184) --- 1700977677533
+2023-11-26 13:57:31.554 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:272) --- 开关已经打开
+2023-11-26 13:57:40.512 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:276) --- 开关已经关闭
+2023-11-26 13:57:42.568 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:272) --- 开关已经打开
+2023-11-26 13:57:44.307 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:276) --- 开关已经关闭
+2023-11-26 13:57:44.910 [JNativeHook Dispatch Thread] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.nativeMousePressed(MacroApplication.java:272) --- 开关已经打开
+2023-11-26 13:57:57.251 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:182) --- ServiceTime{api='mtop.common.getTimestamp', v='*', data=com.la0i6.shootmacro.ServiceTime$DataBean@36d0ac50, ret=[SUCCESS::接口调用成功]}
+2023-11-26 13:57:57.252 [Timer-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.check(MacroApplication.java:184) --- 1700978276935
+2023-11-26 14:02:09.317 [AWT-EventQueue-0] [INFO ] com.la0i6.shootmacro/com.la0i6.shootmacro.MacroApplication.lambda$createTrayIcon$3(MacroApplication.java:117) --- Exit测试

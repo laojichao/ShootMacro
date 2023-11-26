@@ -10,13 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e242a19a-d630-484f-b4f0-57e89eb4ef3f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/la0i6/shootmacro/User32Extended.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/myAccessFile.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/myLog.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/myRollingFile.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/crossfire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/la0i6/shootmacro/MacroApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/la0i6/shootmacro/MacroApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/la0i6/shootmacro/MacroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/la0i6/shootmacro/MacroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/la0i6/shootmacro/ServiceTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/la0i6/shootmacro/ServiceTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/la0i6/shootmacro/USP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/la0i6/shootmacro/USP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/la0i6/shootmacro/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/la0i6/shootmacro/hello-view.fxml" afterDir="false" />
     </list>
@@ -59,10 +62,14 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;cf81bec167b505783e77dcd1556f6956&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\IdeaProjects\ShootMacro\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.la0i6.shootmacro" />
     </key>
@@ -71,6 +78,7 @@
     <configuration name="MacroApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.la0i6.shootmacro.MacroApplication" />
       <module name="ShootMacro" />
+      <option name="VM_PARAMETERS" value="-Dfile.encoding=GBK" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.la0i6.shootmacro.*" />
@@ -106,8 +114,26 @@
       <workItem from="1700149515733" duration="32000" />
       <workItem from="1700149971075" duration="110000" />
       <workItem from="1700153623850" duration="3000" />
-      <workItem from="1700204507192" duration="6756000" />
+      <workItem from="1700204507192" duration="6921000" />
+      <workItem from="1700211966235" duration="708000" />
+      <workItem from="1700212838060" duration="483000" />
+      <workItem from="1700225984863" duration="1216000" />
+      <workItem from="1700298817935" duration="1464000" />
+      <workItem from="1700928225925" duration="86000" />
+      <workItem from="1700931023105" duration="2427000" />
+      <workItem from="1700933671168" duration="40000" />
+      <workItem from="1700934470474" duration="283000" />
+      <workItem from="1700970593681" duration="4707000" />
     </task>
+    <task id="LOCAL-00001" summary="添加假狙">
+      <option name="closed" value="true" />
+      <created>1700211421314</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700211421314</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,5 +141,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="添加假狙" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加假狙" />
   </component>
 </project>

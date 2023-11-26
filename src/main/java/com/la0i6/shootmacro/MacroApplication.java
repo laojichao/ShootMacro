@@ -8,9 +8,11 @@ import com.github.kwhat.jnativehook.mouse.NativeMouseListener;
 import com.sun.jna.platform.win32.WinDef;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
@@ -19,10 +21,16 @@ import javafx.stage.Stage;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 import java.util.Timer;
@@ -31,8 +39,9 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
 
 public class MacroApplication extends Application implements NativeMouseListener {
+    private static final Logger logger = LogManager.getLogger(MacroApplication.class);
 
-    private long activeDate = 1702544394471L;
+    private long activeDate = 1704002183000L;
 
     private Robot robot;
     //总开关
@@ -40,18 +49,32 @@ public class MacroApplication extends Application implements NativeMouseListener
     private boolean timeEnable = true;
     private Label label_status;
     private CheckBox cb_shoot;
-
+    private CheckBox cb_g;
+    private TrayIcon trayIcon;
     private USP uspThread = null;
+
+
     @Override
     public void start(Stage stage) throws IOException {
+        //是否打开日志
         FXMLLoader fxmlLoader = new FXMLLoader(MacroApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
 //        stage.setAlwaysOnTop(true);
         stage.setTitle("CF瞬狙宏");
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.show();
+        Platform.setImplicitExit(false);//隐式退出开关，设置关闭所有窗口后程序仍不退出
         initUI(scene);
+        Image icon = new Image(getClass().getResourceAsStream("/crossfire.png"));
+        stage.getIcons().add(icon);
+        // 创建系统托盘图标
+        createTrayIcon(stage);
+        // 设置窗口关闭事件
+        stage.setOnCloseRequest(event -> {
+            hideWindow(stage);
+            event.consume();
+        });
+
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -63,6 +86,86 @@ public class MacroApplication extends Application implements NativeMouseListener
                 }
             }
         }, 1000 * 5, 1000 * 60 * 10); // 延迟delay毫秒后，执行第一次task，然后每隔period毫秒执行一次task。
+
+        stage.show();
+    }
+
+    //创建图标
+    private void createTrayIcon(Stage primaryStage) {
+        if (SystemTray.isSupported()) {
+            // 获取系统托盘
+            SystemTray tray = SystemTray.getSystemTray();
+            // 创建弹出菜单
+            PopupMenu popupMenu = new PopupMenu();
+            // 创建系统托盘图标
+
+            Image image = new Image(getClass().getResourceAsStream("/crossfire.png"));
+            trayIcon = new TrayIcon(SwingFXUtils.fromFXImage(image, null), "CF瞬狙", popupMenu);
+            trayIcon.setImageAutoSize(true);
+            // 创建打开菜单项
+            MenuItem openMenuItem = new MenuItem("打开瞬狙");
+            openMenuItem.addActionListener(e -> {
+                Platform.runLater(() -> {
+                    logger.info("Open测试2");
+                    showWindow(primaryStage);
+                });
+            });
+            // 创建退出菜单项
+            MenuItem exitMenuItem = new MenuItem("退出程序");
+            exitMenuItem.addActionListener(e -> {
+                logger.info("Exit测试");
+                Platform.exit();
+                tray.remove(trayIcon);
+            });
+            // 将菜单项添加到弹出菜单
+            popupMenu.add(openMenuItem);
+            popupMenu.add(exitMenuItem);
+            // 将弹出菜单设置到系统托盘图标
+            trayIcon.setPopupMenu(popupMenu);
+            // 将系统托盘图标添加到系统托盘
+            try {
+                tray.add(trayIcon);
+            } catch (AWTException e) {
+                logger.info("Failed to add tray icon.");
+            }
+            // 设置托盘图标双击事件
+            trayIcon.addActionListener(e -> {
+                Platform.runLater(new Runnable() {
+                    public void run() {
+                        showWindow(primaryStage);
+                    }
+                });
+            });
+        } else {
+            logger.info("System tray is not supported.");
+        }
+    }
+
+
+    //打开窗口
+    private void showWindow(Stage primaryStage) {
+        if (primaryStage != null) {
+            Platform.runLater(() -> {
+                if (primaryStage.isIconified()) {
+                    primaryStage.setIconified(false);
+                }
+                if (!primaryStage.isShowing()) {
+                    primaryStage.show();
+                }
+                primaryStage.toFront();
+            });
+        }
+        logger.info("打开窗口");
+    }
+
+    //关闭窗口
+    private void hideWindow(Stage primaryStage) {
+        if (primaryStage != null) {
+            Platform.runLater(() -> {
+                primaryStage.hide();
+            });
+        }
+        logger.info("关闭窗口");
     }
 
 
@@ -75,13 +178,13 @@ public class MacroApplication extends Application implements NativeMouseListener
         if (response.code() == 200) {
             String json = response.body().string();
             ServiceTime serviceTime = JSON.parseObject(json, ServiceTime.class);
-            System.out.println(serviceTime.toString());
+            logger.info(serviceTime.toString());
             long cur = Long.parseLong(serviceTime.getData().getT());
-            System.out.println(cur);
+            logger.info(cur);
             if (cur > activeDate) {
                 timeEnable = false;
                 enable = false;
-                System.out.println("版本过期");
+                logger.info("版本过期");
                 //主线程更新UI
                 updateStatus("版本过期，请添加qq909429920");
 //                label_status.setText("版本过期，请添加qq909429920");
@@ -109,6 +212,7 @@ public class MacroApplication extends Application implements NativeMouseListener
         label_four.setFont(font);
         label_four.setText("瞬狙和架狙有冲突，勾选瞬狙就不生效");
         cb_shoot = (CheckBox)scene.lookup("#cb_shoot");
+        cb_g = (CheckBox)scene.lookup("#cb_g");
     }
 
     public static void main(String[] args) {
@@ -145,24 +249,30 @@ public class MacroApplication extends Application implements NativeMouseListener
     @Override
     public void nativeMousePressed(NativeMouseEvent e) {
         //侧键
-        if (enable && getWindow()) {
+        if (enable) {
             if (e.getButton() == NativeMouseEvent.BUTTON4 && uspThread == null) {
                 uspThread = new USP();
                 uspThread.start();
             } else if (e.getButton() == NativeMouseEvent.BUTTON5 && !cb_shoot.isSelected()) {
                 //瞬狙和假狙有冲突
-                snapshotMacro();
+                if (cb_g.isSelected()) {
+                    shootMacro();//丢枪瞬狙
+                } else {
+                    snapshotMacro();
+                }
+
+
             }
         }
         //滚轮
         if (e.getButton() == NativeMouseEvent.BUTTON3 && timeEnable) {
             enable = !enable;
             if (enable) {
-                System.out.println("开关已经打开");
+                logger.info("开关已经打开");
                 updateStatus("运行状态：已开启");
 
             } else  {
-                System.out.println("开关已经关闭");
+                logger.info("开关已经关闭");
                 updateStatus("运行状态：已关闭");
             }
         }
@@ -171,7 +281,7 @@ public class MacroApplication extends Application implements NativeMouseListener
     @Override
     public void nativeMouseReleased(NativeMouseEvent e) {
         //右键释放
-        if (e.getButton() == NativeMouseEvent.BUTTON2 && enable && cb_shoot.isSelected() && getWindow()) {
+        if (e.getButton() == NativeMouseEvent.BUTTON2 && enable && cb_shoot.isSelected()) {
             shotMacro();
         } else if (e.getButton() == NativeMouseEvent.BUTTON4) {
             //侧键释放
@@ -193,8 +303,8 @@ public class MacroApplication extends Application implements NativeMouseListener
 //        int y = rect[1];
 //        int width = rect[2] - x;
 //        int height = rect[3] - y;
-//        System.out.println("窗口位置：(" + x + ", " + y + ")");
-//        System.out.println("窗口大小：" + width + "x" + height);
+//        logger.info("窗口位置：(" + x + ", " + y + ")");
+//        logger.info("窗口大小：" + width + "x" + height);
         if (gameWindow == null) {
             return false;
         }
@@ -211,7 +321,7 @@ public class MacroApplication extends Application implements NativeMouseListener
 
 
     private void snapshotMacro() {
-        System.out.println("-------------------瞬狙--------------------");
+        logger.info("-------------------瞬狙--------------------");
         robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
         robot.delay(10);
         robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
@@ -233,8 +343,34 @@ public class MacroApplication extends Application implements NativeMouseListener
         robot.keyRelease(KeyEvent.VK_1);
     }
 
+    private void shootMacro() {
+        logger.info("-------------------丢枪瞬--------------------");
+        robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
+        robot.delay(10);
+        robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
+        robot.delay(10);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        robot.delay(10);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        robot.delay(50);
+//        robot.keyPress(KeyEvent.VK_3);
+//        robot.delay(50);
+//        robot.keyRelease(KeyEvent.VK_3);
+//        robot.delay(50);
+//        robot.keyPress(KeyEvent.VK_1);
+//        robot.delay(50);
+//        robot.keyRelease(KeyEvent.VK_1);
+//        robot.delay(50);
+//        robot.keyPress(KeyEvent.VK_1);
+//        robot.delay(50);
+//        robot.keyRelease(KeyEvent.VK_1);
+        robot.keyPress(KeyEvent.VK_G);
+        robot.delay(50);
+        robot.keyRelease(KeyEvent.VK_G);
+    }
+
     private void shotMacro() {
-        System.out.println("-------------------架狙--------------------");
+        logger.info("-------------------架狙--------------------");
 //        robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
 //        robot.delay(10);
 //        robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);

@@ -12,6 +12,9 @@ module com.la0i6.shootmacro {
     requires java.management;
     requires com.sun.jna;
     requires com.sun.jna.platform;
+    requires javafx.swing;
+    requires org.apache.logging.log4j;
+    requires org.apache.logging.log4j.core;
 
     opens com.la0i6.shootmacro to javafx.fxml;
     exports com.la0i6.shootmacro;
